@@ -47,6 +47,11 @@ function getEntryFileContent(entryFullPath, vueFullPath) {
 
 walk(pathLib.join(__dirname, 'src'),'pages');
 
+var bannerPlugin = new webpack.BannerPlugin(
+    '// { "framework": "Vue" }\n',
+    { raw: true }
+)
+
 const weexConfig = {
     entry: entry,
     output: {
@@ -70,6 +75,6 @@ const weexConfig = {
             }
         ]
     },
-    //plugins: plugins,
+    plugins: [bannerPlugin],
 };
 module.exports = [weexConfig];
