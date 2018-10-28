@@ -102,3 +102,18 @@ vue use
 添加 Vue 实例方法，通过把它们添加到 Vue.prototype 上实现。
 
 一个库，提供自己的 API，同时提供上面提到的一个或多个功能，如 vue-router
+
+
+
+
+https://www.jianshu.com/p/9aff4b5f78e7
+@click.native
+点击事件失效
+官方明确了一些不支持@click='function()'方式的标签
+
+自定义的组件需要
+
+<customComponent @click.native='customClick()'></customComponent>
+https://segmentfault.com/q/1010000010269704
+
+而app native 不识别 @click.native

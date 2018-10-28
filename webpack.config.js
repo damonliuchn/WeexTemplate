@@ -2,7 +2,7 @@ const pathLib = require('path');
 const fs = require('fs-extra');
 const webpack = require('webpack');
 const entry = {};
-const tempFullPath = pathLib.join(__dirname , 'temp');
+const tempFullPath = pathLib.join(__dirname ,'temp');
 const entryFileTempletePath = pathLib.join(__dirname,'src','main.js');
 
 //搜集入口文件并生产对应的入口js文件，实现MPA
@@ -47,10 +47,10 @@ function getEntryFileContent(entryFullPath, vueFullPath) {
 
 walk(pathLib.join(__dirname, 'src'),'pages');
 
-var bannerPlugin = new webpack.BannerPlugin(
-    '// { "framework": "Vue" }\n',
-    { raw: true }
-)
+var bannerPlugin = new webpack.BannerPlugin({
+    banner: '// { "framework": "Vue" } \n',
+    raw: true
+})
 
 const weexConfig = {
     entry: entry,

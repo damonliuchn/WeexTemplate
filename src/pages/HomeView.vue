@@ -1,7 +1,7 @@
 <template>
-  <div class="wrapper">
-    <text class="title">this is home page.</text>
-    <text class="scrm-button" @click="jump()">about</text>
+  <div class="wrapper" >
+    <text class="title">$Title this is home page444.   IS_DEV</text>
+    <text class="scrm-button" @click="jump">about</text>
   </div>
 </template>
 
@@ -29,7 +29,12 @@
     },
     methods: {
       jump: function () {
-        this.$router.push({ path: '/about'})
+          var modal = weex.requireModule('modal')
+          modal.toast({
+              message: 'This is a toast',
+              duration: 0.3
+          })
+         this.$router.push({ path: '/about'})
       }
     }
   }
