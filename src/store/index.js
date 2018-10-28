@@ -1,6 +1,4 @@
-// https://vuex.vuejs.org/zh-cn/intro.html
-// make sure to call Vue.use(Vuex) if using a module system
-//import Vue from "vue";
+//import Vue from "vue";  //weex native 无需引入vue，h5 在html里引入vue
 import Vuex from "vuex";
 
 Vue.use(Vuex)
@@ -10,7 +8,6 @@ const store = new Vuex.Store({
         count: 0
     },
     getters:{
-        // 参数列表state指的是state数据
         getCount(state){
             return state.count;
         }
@@ -18,7 +15,6 @@ const store = new Vuex.Store({
     actions: {
         decrement({commit, state}){
             // 跟后台打交道
-            // 调用mutaions里面的方法
             commit("increment");
         }
     },

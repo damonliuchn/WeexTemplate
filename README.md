@@ -1,5 +1,15 @@
 ## weex-vue-router页面跳转
 
+
+nativempa（navigator）
+webspa（vuerouter）
+webspa-nativempa（web用vuerouter、native用navigator） master
+小程序类似 链接 ithome-lite
+webspa-nativespa（都用vuerouter）
+
+
+
+
 ### 下载
 
 ```

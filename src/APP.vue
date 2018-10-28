@@ -11,13 +11,7 @@
 <script>
   export default {
     mounted: function () {
-      this.$router.push({ path: '/home'})
-    },
-    data () {
-      return {
-      }
-    },
-    methods: {
+        this.$router.push({path: '/home'})
     }
   }
 </script>

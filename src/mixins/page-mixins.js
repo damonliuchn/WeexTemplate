@@ -12,7 +12,7 @@ export default {
     methods: {
         push (path) {
             if (WXEnvironment.platform !== 'Web') {
-                routes.some(function(v){
+                routes.some(v =>{
                     if(v.path === path) {
                         navigator.push({
                             url: v.remoteBundle,
@@ -31,12 +31,6 @@ export default {
             }else{
                 this.$router.go(-1)
             }
-        },
-        toast(text){
-            this.modal.toast({
-                message: text,
-                duration: 0.3
-            })
-        },
+        }
     }
 }

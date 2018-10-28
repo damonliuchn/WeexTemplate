@@ -1,5 +1,5 @@
 const pathTo = require('path');
-const fs = require('fs-extra');
+//const fs = require('fs-extra');
 const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 //const VueLoaderPlugin = require('vue-loader/lib/plugin')
@@ -7,10 +7,10 @@ const entry = './src/main.js';
 
 const plugins = [
     //new webpack.optimize.UglifyJsPlugin({minimize: true}),
-    new webpack.BannerPlugin({
-        banner: '// { "framework": "Vue" } \n',
-        raw: true
-    }),
+    // new webpack.BannerPlugin({
+    //     banner: '// { "framework": "Vue" } \n',
+    //     raw: true
+    // }),
     new CopyPlugin([
         {from: pathTo.join(__dirname, './src/index.html'), to: pathTo.join(__dirname, './dist')}
     ])
@@ -29,14 +29,14 @@ const webConfig = {
                 test: /\.js$/,
                 use: [
                     {
-                    loader: 'babel-loader'
-                }],
+                        loader: 'babel-loader'
+                    }
+                ],
                 exclude: /node_modules/
             },
             {
                 test: /\.vue(\?[^?]+)?$/,
                 use: [
-
                     {
                         loader: 'vue-loader'
                         //weex-vue-render 如果要升级到 1.x 需要配置如下信息
@@ -62,8 +62,7 @@ const webConfig = {
                         //     ]
                         // }
                     }
-                    ,
-                    ]
+                ]
             }
         ]
     },

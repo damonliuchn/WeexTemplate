@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
-        <p>dddddddddddd</p>
-        <text class="title">$Title this is home page444.   IS_DEV{{count}}</text>
+        <p>Test</p>
+        <text class="title">home page, test vuex:{{count}}</text>
         <text class="scrm-button" @click="jump">about</text>
     </div>
 </template>
@@ -46,14 +46,7 @@
         },
         methods: {
             jump: function () {
-                var modal = weex.requireModule('modal')
-                modal.toast({
-                    message: 'This is a toast',
-                    duration: 0.3
-                })
-
                 this.push('/about')
-
                 // 调用vuex的ations设置城市的值
                 this.$store.dispatch("decrement");
             }

@@ -53,10 +53,10 @@ var bannerPlugin = new webpack.BannerPlugin({
 })
 
 const weexConfig = {
-    entry: './src/main.js',
+    entry: entry,
     output: {
         path: pathLib.join(__dirname, 'dist'),
-        filename: '[name].na.js',
+        filename: '[name].js',
     },
     module: {
         rules: [
