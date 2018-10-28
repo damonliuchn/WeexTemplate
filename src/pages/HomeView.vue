@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper" >
-    <text class="title">$Title this is home page444.   IS_DEV</text>
+    <p>dddddddddddd</p>
+    <text class="title">$Title this is home page444.   IS_DEV{{count}}</text>
     <text class="scrm-button" @click="jump">about</text>
   </div>
 </template>
@@ -27,6 +28,12 @@
       return {
       }
     },
+    computed:{
+          count:function() {
+              // 通过vuex的getters方法来获取state里面的数据
+              return this.$store.getters.getCount;
+          }
+    },
     methods: {
       jump: function () {
           var modal = weex.requireModule('modal')
@@ -35,6 +42,8 @@
               duration: 0.3
           })
          this.$router.push({ path: '/about'})
+          // 调用vuex的ations设置城市的值
+          this.$store.dispatch("decrement");
       }
     }
   }
