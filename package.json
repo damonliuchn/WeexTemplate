@@ -5,6 +5,7 @@
         "build": "webpack",
         "build:h5": "webpack --config webpack.config.h5.js",
         "dev": "webpack --config webpack.config.js --watch",
+        "dev:h5": "webpack --config webpack.config.h5.js",
         "serve": "node server.js"
     },
     "dependencies": {
