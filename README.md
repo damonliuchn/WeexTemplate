@@ -48,3 +48,9 @@ npm run serve
 ## 注意
 
 - Weex Web 在PC浏览器下click有问题，在WeexNative和手机浏览器下正常。在PC浏览器下可使用click.native
+
+## Thank
+[heuuLZP/weex-vue-router](https://github.com/heuuLZP/weex-vue-router)
+
+## License
+[MIT](http://opensource.org/licenses/MIT)
