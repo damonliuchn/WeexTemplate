@@ -11,26 +11,18 @@ export default {
     },
     methods: {
         push (path) {
-            if (WXEnvironment.platform !== 'Web') {
-                routes.some(v =>{
-                    if(v.path === path) {
-                        navigator.push({
-                            url: v.remoteBundle,
-                            animated: "true"
-                        })
-                        return true;
-                    }
-                });
-            }else{
-                this.$router.push({ path: path})
-            }
+            routes.some(v =>{
+                if(v.path === path) {
+                    navigator.push({
+                        url: v.remoteBundle,
+                        animated: "true"
+                    })
+                    return true;
+                }
+            });
         },
         pop () {
-            if (WXEnvironment.platform !== 'Web') {
-                navigator.pop()
-            }else{
-                this.$router.go(-1)
-            }
+            navigator.pop()
         }
     }
 }

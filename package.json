@@ -3,14 +3,11 @@
     "version": "1.0.0",
     "scripts": {
         "build": "webpack",
-        "build:h5": "webpack --config webpack.config.h5.js",
         "dev": "webpack --config webpack.config.js --watch",
-        "dev:h5": "webpack --config webpack.config.h5.js",
         "serve": "node server.js"
     },
     "dependencies": {
         "vue": "^2.5.17",
-        "vue-router": "^2.7.0",
         "vuex": "^2.1.1"
     },
     "devDependencies": {
