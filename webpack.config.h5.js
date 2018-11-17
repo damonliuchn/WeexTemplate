@@ -1,4 +1,4 @@
-const pathTo = require('path');
+const pathLib = require('path');
 //const fs = require('fs-extra');
 const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -12,15 +12,15 @@ const plugins = [
     //     raw: true
     // }),
     new CopyPlugin([
-        {from: pathTo.join(__dirname, './src/index.html'), to: pathTo.join(__dirname, './dist')}
+        {from: pathLib.join(__dirname, './src/index.html'), to: pathLib.join(__dirname, './dist')}
     ])
 ];
 
 const webConfig = {
-    context: pathTo.join(__dirname),
+    context: pathLib.join(__dirname),
     entry: entry,
     output: {
-        path: pathTo.join(__dirname, 'dist'),
+        path: pathLib.join(__dirname, 'dist'),
         filename: '[name].js',
     },
     module: {

@@ -2,7 +2,7 @@
     <div class="wrapper">
         <p>Test</p>
         <text class="title">home page, test vuex:{{count}}</text>
-        <text class="scrm-button" @click="jump">about</text>
+        <text class="scrm-button" @click="jump">click go about page</text>
     </div>
 </template>
 
