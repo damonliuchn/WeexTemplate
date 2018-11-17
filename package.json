@@ -2,9 +2,7 @@
     "name": "weex",
     "version": "1.0.0",
     "scripts": {
-        "build": "webpack",
         "build:h5": "webpack --config webpack.config.h5.js",
-        "dev": "webpack --config webpack.config.js --watch",
         "dev:h5": "webpack --config webpack.config.h5.js",
         "serve": "node server.js"
     },
@@ -25,7 +23,6 @@
         "vue-loader": "^14.2.2",
         "vue-template-compiler": "^2.5.17",
         "css-loader": "^1.0.1",
-        "weex-loader": "^0.7.12",
         "weex-vue-render": "^0.12.32",
         "express": "^4.16.3",
         "fs-extra": "^4.0.1"
