@@ -46,7 +46,7 @@
         },
         methods: {
             jump: function () {
-                this.push('/about')
+                this.$router.push({ path: '/about'})
                 // 调用vuex的ations设置城市的值
                 this.$store.dispatch("decrement");
             }
