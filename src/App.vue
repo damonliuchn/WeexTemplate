@@ -9,9 +9,11 @@
 </style>
 
 <script>
+    import pageMixins from './mixins/page-mixins'
   export default {
-    mounted: function () {
-        this.$router.push({path: '/home'})
+      mixins: [pageMixins],
+      mounted: function () {
+        this.push('/home')
     }
   }
 </script>

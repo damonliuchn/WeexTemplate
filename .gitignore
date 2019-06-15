@@ -3,3 +3,5 @@ dist/
 temp/
 .idea/
 local
+/commit.js
+/commit.sh

@@ -5,6 +5,7 @@ const entry = {};
 const tempFullPath = pathLib.join(__dirname ,'temp');
 const entryFileTempletePath = pathLib.join(__dirname,'src','main.js');
 
+entry['main']=entryFileTempletePath
 //搜集入口文件并生产对应的入口js文件，实现MPA
 function walk(root,path) {
     var fullPath = pathLib.join(root, path);
@@ -44,7 +45,6 @@ function getEntryFileContent(entryFullPath, vueFullPath) {
     })
     return contents;
 }
-
 walk(pathLib.join(__dirname, 'src'),'pages');
 
 var bannerPlugin = new webpack.BannerPlugin({
